@@ -1,4 +1,4 @@
-allure reports, web automation, chromedriver,mocha, POM model, 
+Web automation demo using webdriverio, chromedriver, mocha, POM model, and allure reports.
 
 npm init -y
 
