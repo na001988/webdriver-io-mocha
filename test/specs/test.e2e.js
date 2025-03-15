@@ -14,7 +14,7 @@ describe('test-case-001', () => {
 describe('test-case-002', () => {
     it('should return main page', async () => {
         await LoginPage.open()
-        await LoginPage.login('tomsmith', 'SuperSecretPassword!')
+        await LoginPage.login('tomsmith', 'SuperSecretPassword!------')
         await expect(SecurePage.flashAlert).toHaveText(expect.stringContaining('logged'))
 
     })
