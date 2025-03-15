@@ -19,3 +19,7 @@ npm i -g allure-commandline --save-dev
 allure generate .\allure-results --clean
 
 allure open
+
+// CI-CD
+
+Created a yaml file to trigger test on any new push
