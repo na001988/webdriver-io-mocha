@@ -1,26 +1,28 @@
 name: CI
 on: [push, pull_request]
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-        - name: ⬇️ Checkout Code
-          uses: actions/checkout@v4
+      - name: ⬇️ Checkout Code
+        uses: actions/checkout@v4
 
-        - name: 🐢 Setup Node
-          uses: actions/setup-node@v4
-          with:
-            node-version-file: '.nvmrc'
+      - name: 🐢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
 
-        - name: 🏗️ Install Dependencies
-          run: npm install
+      - name: 🏗️ Install Dependencies
+        run: npm ci
 
-        - name: 🧪 Test
-          run: npm run wdio
+      - name: 🧪 Run Tests
+        run: npm run wdio
 
-        - name: 📦 Upload Logs
-          uses: actions/upload-artifact@v4
-          if: failure()
-          with:
-            name: logs
-            path: logs
+      - name: 📦 Upload Logs on Failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs
+          path: logs
