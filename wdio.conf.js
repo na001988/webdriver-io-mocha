@@ -51,6 +51,9 @@ export const config = {
     //
     capabilities: [{
         browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: ['headless', 'disable-gpu']
+        },
         acceptInsecureCerts: true
     }],
 

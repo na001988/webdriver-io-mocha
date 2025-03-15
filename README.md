@@ -1,8 +1,10 @@
 Web automation demo using webdriverio, chromedriver, mocha, POM model, and allure reports.
 
-npm init -y
+pre-req on win
+- install java 1.8
+- install node node-v20.19.0-x64 with additional tools
 
-mpm init wdio
+npm install
 
 npm ls webdriverio
 
