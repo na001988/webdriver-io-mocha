@@ -27,6 +27,6 @@ allure generate .\allure-results --clean
 
 allure open
 
-// CI-CD
+// CI-CD with github actions
 
 Created a yaml file to trigger tests on any new code push to the master branch

@@ -33,8 +33,10 @@ class ShopPage extends Page {
         return await this.getPriceLabel(productNumber).getText();
       }
     
-      async clickBuyButton(productNumber) {
-        await this.getBuyButton(productNumber).click();
+      async clickBuyButton(productNumber, qty) {
+        for (let i = 0; i < qty; i++){
+          await this.getBuyButton(productNumber).click();
+        }
       }
     
       async isProductVisible(productNumber){

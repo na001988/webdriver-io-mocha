@@ -25,6 +25,7 @@ class CartPage extends Page {
         return $('tbody tr td:nth-child(1)');
     }
 
+
     async getSubtotalPrices () {
         const prices = [];
         const items = await this.cartItems;
