@@ -20,6 +20,9 @@ jobs:
       - name: 🔧 Install Allure
         run: npm install -g allure-commandline
 
+      - name: Install Fake Lib
+        run: npm install @faker-js/faker --save-dev
+
       - name: 🧪 Run Tests
         run: npm run wdio
 

@@ -9,6 +9,7 @@ pre-requisites to work locally on windows
 // modules
 npm install
 npm i -g allure-commandline --save-dev
+npm install @faker-js/faker --save-dev
 
 // verify packages
 npm ls webdriverio
